@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useQuery } from "@apollo/client";
 import { GET_PLANETS } from "../../graphql/queries";
 import { FETCH_LIMIT } from "../../constants";
-import { PaginationControls, PlanetsMapping } from "./HomeComponents";
+import { PaginationControls, PlanetsMapping } from "../../components";
 import { Title, Error, Loading } from "../../components";
 import Layout from "../../layout";
 
