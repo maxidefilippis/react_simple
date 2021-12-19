@@ -1,6 +1,6 @@
 # Projecto de Maxi De Filippis
 
-Este es un projecto de nivelación para testear el nivel en React, Redux, GraphQL, SASS y Typescript.
+App creada con React, Redux, GraphQL, SASS y Typescript.
 
 ## Iniciar la aplicación:
 
