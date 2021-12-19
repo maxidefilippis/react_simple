@@ -4,7 +4,7 @@ import { ApolloProvider } from "@apollo/client";
 import Routes from "./routes";
 import client from "./api";
 import store from "./state";
-import "./App.css";
+import "./App.scss";
 
 function App() {
   return (
