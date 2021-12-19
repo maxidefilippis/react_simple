@@ -1,8 +1,9 @@
 import React from "react";
+import "./index.scss";
 import { PlanetCard } from "../..";
 
 const PlanetsMapping = ({ planets }) => (
-  <div>
+  <div className="planetsMapping">
     {planets.map((planet) => (
       <PlanetCard key={planet.name} planet={planet} />
     ))}
