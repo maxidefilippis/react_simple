@@ -1,0 +1,15 @@
+@import "../../styles/patterns.scss";
+
+.button {
+  @include flex-center;
+  @include button-design;
+  height: 2.5rem;
+  width: max-content;
+  margin: auto;
+  margin-bottom: 1rem;
+  &:hover {
+    background: $red;
+    color: $white;
+    cursor: pointer;
+  }
+}
