@@ -1,0 +1,10 @@
+@import "../../../styles/patterns.scss";
+
+.heart {
+  &__red {
+    fill: rgba($red, 0.9);
+  }
+  &__none {
+    stroke: rgba($red, 0.5);
+  }
+}
