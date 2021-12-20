@@ -1,0 +1,9 @@
+@import "../../styles/patterns.scss";
+
+.title {
+  color: rgba($red, 0.9);
+  width: max-content;
+  margin: 0 auto;
+  text-decoration: underline;
+  margin-bottom: 1rem;
+}
