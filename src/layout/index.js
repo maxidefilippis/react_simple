@@ -3,13 +3,14 @@ import "./index.scss";
 import { Link } from "react-router-dom";
 import { Search } from "../components";
 import { useSelector } from "react-redux";
+import { Favorite, Home } from "../assets/svg";
 
 const Links = () => {
   const { favorites } = useSelector(({ favoritesReducer }) => favoritesReducer);
   return (
     <nav className="layout__links">
-      <Link to="/">HOME</Link>
-      <Link to="/favorites">FAVORITES: {favorites.length}</Link>
+      <Link to="/"><Home /> HOME</Link>
+      <Link to="/favorites"><Favorite /> FAVORITES: {favorites.length}</Link>
     </nav>
   );
 };
