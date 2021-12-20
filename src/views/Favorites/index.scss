@@ -1,0 +1,15 @@
+@import "../../styles/patterns.scss";
+
+.favorites {
+  height: 100%;
+  &__button {
+    margin: auto;
+    margin-bottom: 1rem;
+  }
+  &__message {
+    @include flex-center;
+    font-size: 3rem;
+    margin: auto;
+    padding-bottom: 2.5rem;
+  }
+}
