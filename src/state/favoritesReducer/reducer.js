@@ -1,7 +1,7 @@
 import {
   ADD_FAVORITE,
   REMOVE_FAVORITE,
-  CLEAN_FAVORITES,
+  CLEAR_FAVORITES,
 } from "../../constants";
 
 const initialState = {
@@ -19,7 +19,7 @@ const favoritesReducer = (state = initialState, action) => {
           (element) => element.name !== action.payload.name
         ),
       };
-    case CLEAN_FAVORITES:
+    case CLEAR_FAVORITES:
       return { ...state, favorites: [] };
     default:
       return state;

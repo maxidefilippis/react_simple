@@ -1,4 +1,4 @@
-import { ADD_FAVORITE, REMOVE_FAVORITE, CLEAN_FAVORITES } from "../../constants";
+import { ADD_FAVORITE, REMOVE_FAVORITE, CLEAR_FAVORITES } from "../../constants";
 
 export const addFavorite = (payload) => {
   return {
@@ -14,8 +14,8 @@ export const removeFavorite = (payload) => {
   };
 };
 
-export const cleanFavorites = () => {
+export const clearFavorites = () => {
   return {
-    type: CLEAN_FAVORITES,
+    type: CLEAR_FAVORITES,
   };
 };

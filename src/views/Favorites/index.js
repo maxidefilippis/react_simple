@@ -2,7 +2,7 @@ import React from "react";
 import "./index.scss";
 import { useSelector, useDispatch } from "react-redux";
 import { Button, PlanetsMapping, Title } from "../../components";
-import { cleanFavorites } from "../../state/favoritesReducer/actions";
+import { clearFavorites } from "../../state/favoritesReducer/actions";
 import Layout from "../../layout";
 
 const Favorites = () => {
@@ -14,8 +14,8 @@ const Favorites = () => {
     areThereFavorites ? (
       <Button
         className="button favorites__button"
-        name="Clean Favorites"
-        onClick={() => dispatch(cleanFavorites())}
+        name="Clear Favorites"
+        onClick={() => dispatch(clearFavorites())}
       />
     ) : (
       <p className="favorites__message">NO FAVORITES YET</p>
