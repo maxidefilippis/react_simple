@@ -1,0 +1,42 @@
+@import "../styles/patterns.scss";
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto;
+  min-height: 100vh;
+  padding: 1rem 2rem;
+  background: rgba($red, 0.9);
+  &__header {
+    @include flex-center;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+    min-height: 40px;
+  }
+  &__links {
+    display: flex;
+    > a {
+      margin-right: 2rem;
+    }
+  }
+  &__main {
+    min-height: calc(95vh - 2rem);
+    background: $white;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    box-shadow: $box-shadow;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    min-height: 75vh;
+  }
+  &__footer {
+    @include flex-center;
+    margin-top: 1rem;
+    min-height: calc(5vh - 1rem);
+    color: $white;
+  }
+}
