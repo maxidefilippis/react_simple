@@ -1,7 +1,8 @@
 import { createStore, combineReducers } from "redux";
 import favoritesReducer from "./favoritesReducer/reducer";
+import planetsReducer from "./planetsReducer/reducer";
 
-const reducers = combineReducers({ favoritesReducer });
+const reducers = combineReducers({ planetsReducer, favoritesReducer });
 
 const store = createStore(
   reducers,

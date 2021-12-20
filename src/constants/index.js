@@ -4,6 +4,9 @@ export const NEXT_LIMIT = 6;
 export const FETCH_LIMIT = 10;
 
 // Actions constants
-export const ADD_FAVORITE = "ADD_FAVORITE"
-export const REMOVE_FAVORITE = "REMOVE_FAVORITE"
-export const CLEAN_FAVORITES = "CLEAN_FAVORITES"
+export const SEARCH_PLANET = "SEARCH_PLANET";
+export const CLEAR_SEARCH = "CLEAR_SEARCH";
+
+export const ADD_FAVORITE = "ADD_FAVORITE";
+export const REMOVE_FAVORITE = "REMOVE_FAVORITE";
+export const CLEAN_FAVORITES = "CLEAN_FAVORITES";
