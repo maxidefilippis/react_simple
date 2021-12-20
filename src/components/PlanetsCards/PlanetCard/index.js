@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./index.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { Heart } from "../../../assets/svg";
 import {
@@ -24,28 +25,43 @@ const PlanetCard = ({ planet }) => {
     }
   };
 
-  return (
-    <div>
-      <div>
-        <h3>{name}</h3>
-        <Heart heartFill={heartFill} onClick={handleFavorite} />
-      </div>
+  const CardTitle = () => (
+    <div className="planetCard__titleContainer">
+      <h3 className="planetCard__title">{name}</h3>
+      <Heart heartFill={heartFill} onClick={handleFavorite} />
+    </div>
+  );
 
-      <div>
-        <h4>Diametro:</h4> <span>{diameter}</span>
+  const CardProperties = () => {
+    let clima = climates || planet.climate.split(",");
+    let terra = terrains || planet.terrain.split(",");
+    return (
+      <div className="planetCard__properties">
+        <h4>Diameter:</h4>
+        <span className="planetCard__diameter">{diameter || 0}</span>
+        <h4>Climates:</h4>
+        <div className="planetCard__climatesContainer">
+          {clima.map((clima, index) => (
+            <span key={index} className="planetCard__climate">
+              {clima}
+            </span>
+          ))}
+        </div>
+        <h4>Terrains:</h4>
+        <div className="planetCard__terrainsContainer">
+          {terra.map((terrain, index) => (
+            <span key={index} className="planetCard__terrain">
+              {terrain}
+            </span>
+          ))}
+        </div>
       </div>
-      <div>
-        <h4>Climas:</h4>
-        {climates.map((clima, index) => (
-          <span key={index}>{clima} </span>
-        ))}
-      </div>
-      <div>
-        <h4>Terrenos:</h4>
-        {terrains.map((terrain, index) => (
-          <span key={index}>{terrain} </span>
-        ))}
-      </div>
+    );
+  };
+  return (
+    <div className="planetCard">
+      <CardTitle />
+      <CardProperties />
     </div>
   );
 };
