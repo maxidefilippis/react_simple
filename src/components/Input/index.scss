@@ -1,0 +1,11 @@
+@import "../../styles/patterns.scss";
+
+.input {
+  @include flex-center;
+  @include button-design;
+  border: 1px solid $table-grey;
+  outline: none;
+  box-shadow: $box-shadow;
+  height: 2.5rem;
+  text-align: left;
+}
