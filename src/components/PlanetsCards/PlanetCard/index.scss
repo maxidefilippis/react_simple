@@ -1,0 +1,50 @@
+@import "../../../styles/patterns.scss";
+
+.planetCard {
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+  box-shadow: $box-shadow;
+  padding: 1rem;
+  border-radius: $border-radius;
+  border: 1px solid $table-grey;
+  min-height: 20rem;
+  &:hover {
+    box-shadow: $box-shadow-red;
+  }
+  h4 {
+    text-align: center;
+  }
+  &__properties {
+    margin-top: 1rem;
+  }
+  &__titleContainer {
+    @include flex-center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    > svg {
+      height: 2rem;
+      width: 2rem;
+      cursor: pointer;
+      &:hover {
+        fill: rgba($red, 0.5);
+      }
+    }
+  }
+  &__climatesContainer,
+  &__terrainsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 5rem), 1fr));
+    grid-gap: 0.25rem;
+    margin-bottom: 0.5rem;
+  }
+  &__diameter,
+  &__climate,
+  &__terrain {
+    @include card-chips-design;
+    text-align: center;
+  }
+  &__diameter {
+    margin-bottom: 0.5rem;
+  }
+}
