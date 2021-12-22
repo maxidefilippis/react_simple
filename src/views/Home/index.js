@@ -31,8 +31,8 @@ const Home = () => {
 
   const { planets } = data?.allPlanets;
   const controls = {
-    ["back"]: () => setPagination(pagination - 1),
-    ["next"]: () => setPagination(pagination + 1),
+    back: () => setPagination(pagination - 1),
+    next: () => setPagination(pagination + 1),
   };
 
   const resetSearch = () => {
